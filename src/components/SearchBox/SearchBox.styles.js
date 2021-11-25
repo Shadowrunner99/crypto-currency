@@ -14,4 +14,8 @@ border-radius: 4px;
 padding:5px;
 margin-bottom:17px;
 
+&::focus {
+    border: 1px solid #5D6BCE;
+}
+
 `

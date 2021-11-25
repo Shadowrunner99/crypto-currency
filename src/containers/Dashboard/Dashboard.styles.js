@@ -2,10 +2,13 @@ import styled from 'styled-components';
 
 export const TitleContainer = styled('div')`
 display:flex;
+padding:0 20px;
+
+& .title {    
 font-weight: 600;
 font-size: 16px;
 line-height: 28px;
-padding:0 20px;
+}
 `;
 
 export const CurrencyLogo = styled('img')`
