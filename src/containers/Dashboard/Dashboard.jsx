@@ -3,9 +3,9 @@ import { useSelector } from 'react-redux';
 import { DASHBOARD } from './constants';
 import * as Styles from './Dashboard.styles';
 import CryptoInfo from '../../components/CryptoInfo';
-import { selectors } from '../Currency-Selector/reducer';
+import { selectors } from '../CurrencySelector/reducer';
 import { filteredCurrency } from '../../global/helpers';
-import CurrencySelector from '../Currency-Selector';
+import CurrencySelector from '../CurrencySelector';
 import Logo from '../../global/images/btc.png';
 
 const Dashboard = () => {

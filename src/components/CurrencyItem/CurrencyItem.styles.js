@@ -24,7 +24,7 @@ export const CurrencyWrapper = styled('div')`
     padding: 27px 0;
   }
 
-  .currency-wrap:last-child {
+  &:last-child .currency-wrap {
     border-bottom: 1px solid #e1e4e8;
   }
 

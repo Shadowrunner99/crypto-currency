@@ -12,9 +12,9 @@ export const TitleContainer = styled('div')`
 `;
 
 export const CurrencyLogo = styled('img')`
-  width: 32px;
-  height: 32px;
-  padding: 20px 0;
+  width: 16px;
+  height: 16px;
+  padding: 17px 0;
   margin-right: 8px;
 `;
 

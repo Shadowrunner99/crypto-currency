@@ -1,4 +1,4 @@
-import { currencySelectorSagaWatcher } from '../containers/Currency-Selector/saga';
+import { currencySelectorSagaWatcher } from '../containers/CurrencySelector/saga';
 import rootSaga from '../rootSaga';
 import { all } from 'redux-saga/effects';
 
