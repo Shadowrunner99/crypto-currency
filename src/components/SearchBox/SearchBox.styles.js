@@ -13,4 +13,8 @@ export const SearchBox = styled('input')`
   border-radius: 4px;
   padding: 5px;
   margin-bottom: 17px;
+
+  &::focus {
+    border: 1px solid #5d6bce;
+  }
 `;

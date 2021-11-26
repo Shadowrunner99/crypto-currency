@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const CurrencyInfoWrapper = styled('div')`
   display: flex;
-  flex: 0 0 27.3333%;
-  max-width: 27.3333%;
+  flex: 0 0 27.3%;
+  max-width: 310px;
   min-width: 130px;
   margin-right: 15px;
   margin-bottom: 15px;
@@ -24,8 +24,8 @@ export const CurrencyLogoWrapper = styled('div')`
 `;
 
 export const CurrencyLogo = styled('img')`
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
 `;
 
@@ -35,46 +35,79 @@ export const CurrencyInfo = styled('div')`
   font-weight: 600;
   flex: 1 1 auto;
 
-  & h2 {
+  & .currency-title {
+    font-style: normal;
+    font-weight: 600;
     font-size: 16px;
     line-height: 20px;
+    color: #444d56;
   }
 
-  & p {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 18px;
-    color: #6a737d;
-  }
-
-  & span {
+  & .currency {
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
     color: #959da5;
   }
+
+  & .change-title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #6a737d;
+    margin-top: 0;
+  }
+
+  & .price {
+    margin: 0;
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #24292e;
+  }
+
+  & .price-title {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #6a737d;
+  }
+
+  & .inc {
+    color: #8bc34a;
+  }
+
+  & .dec {
+    color: #db4949;
+  }
 `;
 
 export const ChangeWrapper = styled('div')`
   display: flex;
+  padding-top: 16px;
+  margin-bottom: 6px;
 `;
 
 export const ChangeText = styled('span')`
-  font-size: 18px !important;
-  font-weight: 600 !important;
-  line-height: 24px !important;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-right: 5px;
 `;
+
 export const ChangeIcon = styled('img')`
   height: 12px;
   align-self: center;
-  padding: 3px;
 `;
 
 export const PricesWrapper = styled('div')`
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   border-top: 1px solid #e1e4e8;
+  padding: 5px 0;
 `;
+
 export const PriceInfo = styled('div')`
   border-right: 1px solid #e1e4e8;
   flex: 1 1 auto;
@@ -82,15 +115,5 @@ export const PriceInfo = styled('div')`
 
   &:last-child {
     border-right: none;
-  }
-
-  & p {
-    font-size: 14px;
-    color: #24292e;
-  }
-
-  & span {
-    font-size: 12px;
-    color: #6a737d;
   }
 `;

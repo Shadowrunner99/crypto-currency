@@ -5,11 +5,13 @@ import * as Styles from './CurrencyItem.styles';
 const CurrencyItem = ({ currency, title, handleSelectCurrency, logo, classStatus }) => {
   return (
     <Styles.CurrencyWrapper onClick={() => handleSelectCurrency(currency)} className={classStatus}>
-      <Styles.CurrencyContainer>
+      <div className="currency-wrap">
         <img src={logo} alt={title} className="currency-image" />
-        <h2>{currency}</h2>
-      </Styles.CurrencyContainer>
-      <p>{title}</p>
+        <Styles.CurrencyContainer>
+          <h2 className="currency currency-symbol">{currency}</h2>
+          <p className="currency currency-title">{title}</p>
+        </Styles.CurrencyContainer>
+      </div>
     </Styles.CurrencyWrapper>
   );
 };

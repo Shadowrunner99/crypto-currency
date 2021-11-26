@@ -13,21 +13,21 @@ const CryptoInfo = ({ currency, title, buy, sale, change, logo }) => {
         <Styled.CurrencyLogo src={logo} alt={title} />
       </Styled.CurrencyLogoWrapper>
       <Styled.CurrencyInfo>
-        <h2>{title}</h2>
-        <span>{currency}</span>
+        <h2 className="currency-title">{title}</h2>
+        <span className="currency">{currency}</span>
         <Styled.ChangeWrapper>
           <Styled.ChangeText className={change >= 0 ? 'inc' : 'dec'}>{change}</Styled.ChangeText>
           <Styled.ChangeIcon src={change >= 0 ? inc : dec} alt="change" />
         </Styled.ChangeWrapper>
-        <p>{CRYPTO_INFO.changeText}</p>
+        <p className="change-title">{CRYPTO_INFO.changeText}</p>
         <Styled.PricesWrapper>
           <Styled.PriceInfo>
-            <p>{buy}</p>
-            <span>{CRYPTO_INFO.buyText}</span>
+            <p className="price">{buy}</p>
+            <span className="price-title">{CRYPTO_INFO.buyText}</span>
           </Styled.PriceInfo>
           <Styled.PriceInfo>
-            <p>{sale}</p>
-            <span>{CRYPTO_INFO.sellText}</span>
+            <p className="price">{sale}</p>
+            <span className="price-title">{CRYPTO_INFO.sellText}</span>
           </Styled.PriceInfo>
         </Styled.PricesWrapper>
       </Styled.CurrencyInfo>

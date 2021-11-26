@@ -5,15 +5,10 @@ export const CurrencyWrapper = styled('div')`
   flex-direction: column;
   flex: 0 0 auto;
   justify-content: center;
-  padding: 10px 18px;
+  padding: 0 18px;
   min-height: 100px;
   text-align: left;
   cursor: pointer;
-  border-top: 1px solid #e1e4e8;
-
-  &:last-child {
-    border-bottom: 1px solid #e1e4e8;
-  }
 
   & .active {
     border-right: 2px solid #5d6bce;
@@ -23,24 +18,45 @@ export const CurrencyWrapper = styled('div')`
     border-right: 2px solid #5d6bce;
   }
 
-  & p {
-    color: #6a737d;
+  & .currency-wrap {
+    display: flex;
+    border-top: 1px solid #e1e4e8;
+    padding: 27px 0;
+  }
+
+  .currency-wrap:last-child {
+    border-bottom: 1px solid #e1e4e8;
   }
 
   & .currency-image {
-    width: 24px;
-    height: 24px;
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+    margin-top: 3px;
   }
 `;
 export const CurrencyContainer = styled('div')`
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 
-  & h2 {
+  & .currency {
     margin: 0;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
   }
 
-  & img {
+  & .currency-image {
     margin-right: 5px;
+  }
+
+  & .currency-symbol {
+    color: #24292e;
+    margin-bottom: 8px;
+  }
+
+  & .currency-title {
+    color: #6a737d;
   }
 `;

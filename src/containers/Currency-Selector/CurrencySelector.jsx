@@ -27,15 +27,15 @@ const CurrenciesSelector = () => {
   return (
     <Styles.CurrencySelectorWrapper>
       <Styles.SearchWrapper>
-        <h1>
+        <div className="total-wrapper">
           <img
             className="arrow-left"
             alt="arrow"
-            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTYuNjcgMGwyLjgzIDIuODI5LTkuMzM5IDkuMTc1IDkuMzM5IDkuMTY3LTIuODMgMi44MjktMTIuMTctMTEuOTk2eiIvPjwvc3ZnPg=="
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAw
+                            IDI0IDI0Ij48cGF0aCBkPSJNMTYuNjcgMGwyLjgzIDIuODI5LTkuMzM5IDkuMTc1IDkuMzM5IDkuMTY3LTIuODMgMi44MjktMTIuMTctMTEuOTk2eiIvPjwvc3ZnPg=="
           />
-
-          {`${CURRENCY_SELECTOR.totalText}(${total})`}
-        </h1>
+          <h1 className="total">{`${CURRENCY_SELECTOR.totalText} (${total})`}</h1>
+        </div>
         <SearchBox handleChangeSearch={handleSearch} />
       </Styles.SearchWrapper>
       {filteredData(data, search)?.map(({ currency, name, logo }) => {

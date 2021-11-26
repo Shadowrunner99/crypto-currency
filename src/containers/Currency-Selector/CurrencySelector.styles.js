@@ -13,6 +13,8 @@ export const CurrencySelectorWrapper = styled('div')`
   & .arrow-left {
     width: 10px;
     height: 10px;
+    margin-top: 5px;
+    margin-right: 13px;
   }
 
   & .active {
@@ -20,14 +22,20 @@ export const CurrencySelectorWrapper = styled('div')`
     background: #f5f7ff;
   }
 
-  & h1 {
+  & .total {
     font-weight: normal;
     font-size: 14px;
     line-height: 24px;
     color: #444d56;
+    margin: 0;
+  }
+
+  & .total-wrapper {
+    display: flex;
+    padding: 8px 0;
   }
 `;
 
 export const SearchWrapper = styled('div')`
-  padding: 18px;
+  padding: 16px;
 `;

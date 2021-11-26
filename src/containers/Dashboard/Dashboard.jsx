@@ -18,7 +18,7 @@ const Dashboard = () => {
       <Styles.DashboardWrapper>
         <Styles.TitleContainer>
           <Styles.CurrencyLogo src={Logo} alt="logo" />
-          <h1>{DASHBOARD.title}</h1>
+          <h1 className="title">{DASHBOARD.title}</h1>
         </Styles.TitleContainer>
         <Styles.CurrenciesContainer>
           {filteredCurrency(data, selectedCrypto)?.map(
