@@ -1,4 +1,3 @@
-
 export const DASHBOARD = {
-    title: 'My Cryptos',
-}
+  title: 'My Cryptos',
+};

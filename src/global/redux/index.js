@@ -1,5 +1,5 @@
 import { createAction } from '@reduxjs/toolkit';
-import { get } from "lodash";
+import { get } from 'lodash';
 
 export const asyncActionCreator = (action) => {
   const values = ['REQUEST', 'SUCCESS', 'ERROR'];

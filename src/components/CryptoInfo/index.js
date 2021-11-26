@@ -1,3 +1,3 @@
-import CryptoInfo from "./CryptoInfo";
+import CryptoInfo from './CryptoInfo';
 
 export default CryptoInfo;

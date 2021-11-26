@@ -1,3 +1,3 @@
-import CurrencyItem from "./CurrencyItem";
+import CurrencyItem from './CurrencyItem';
 
 export default CurrencyItem;

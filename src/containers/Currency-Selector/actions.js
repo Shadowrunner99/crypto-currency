@@ -1,6 +1,6 @@
-import { createAction } from "@reduxjs/toolkit";
-import { asyncActionCreator } from "../../global/redux";
-import * as constants from "./constants";
+import { createAction } from '@reduxjs/toolkit';
+import { asyncActionCreator } from '../../global/redux';
+import * as constants from './constants';
 
 export const getCurrencies = asyncActionCreator(constants.GET_CURRENCIES_DATA);
 export const getTotal = asyncActionCreator(constants.GET_TOTAL);
