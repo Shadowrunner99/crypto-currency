@@ -1,22 +1,23 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { searchCurrency, getCurrencies, getTotal, selectCurrency } from './actions';
+import { searchCurrency, getCurrenciesRequest, getTotalRequest, selectCurrency } from './actions';
 import { selectors } from './reducer';
 import CurrencyItem from '../../components/CurrencyItem';
 import SearchBox from '../../components/SearchBox';
 import * as Styles from './CurrencySelector.styles';
 import { filteredData } from '../../global/helpers';
 import { CURRENCY_SELECTOR } from './constants';
+import { CurrencyItemProps } from '../../global/types';
 
 const CurrenciesSelector = () => {
   const dispatch = useDispatch();
 
-  const handleSearch = (value) => dispatch(searchCurrency(value));
-  const handleCurrencySelected = (value) => dispatch(selectCurrency(value));
+  const handleSearch = (value: string) => dispatch(searchCurrency(value));
+  const handleCurrencySelected = (value: string) => dispatch(selectCurrency(value));
 
   useEffect(() => {
-    dispatch(getCurrencies.request());
-    dispatch(getTotal.request());
+    dispatch(getCurrenciesRequest());
+    dispatch(getTotalRequest());
   }, [dispatch]);
 
   const data = useSelector(selectors.cryptosData);
@@ -38,7 +39,7 @@ const CurrenciesSelector = () => {
         </div>
         <SearchBox handleChangeSearch={handleSearch} />
       </Styles.SearchWrapper>
-      {filteredData(data, search)?.map(({ currency, name, logo }) => {
+      {filteredData(data, search)?.map(({ currency, name, logo }: CurrencyItemProps) => {
         const className = currency === selectedCurrency ? 'active' : '';
         const realLogo = currency === selectedCurrency ? logo : CURRENCY_SELECTOR.blankImage;
         return (

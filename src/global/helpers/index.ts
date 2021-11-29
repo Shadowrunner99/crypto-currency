@@ -1,4 +1,6 @@
-export const filteredData = (arr, search) =>
+import { CurrencyResponseItemProps, CurrencyItemProps } from '../types';
+
+export const filteredData = (arr: CurrencyItemProps[], search: string | null) =>
   search
     ? arr?.filter(
         ({ name, currency }) =>
@@ -7,5 +9,5 @@ export const filteredData = (arr, search) =>
       )
     : arr;
 
-export const filteredCurrency = (arr, cur) =>
+export const filteredCurrency = (arr: CurrencyResponseItemProps[], cur: string | null) =>
   cur ? arr?.filter(({ currency }) => currency === cur) : arr;

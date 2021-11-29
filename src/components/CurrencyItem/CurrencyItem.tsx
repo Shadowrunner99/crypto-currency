@@ -1,8 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import * as Styles from './CurrencyItem.styles';
 
-const CurrencyItem = ({ currency, title, handleSelectCurrency, logo, classStatus }) => {
+interface CurrencyItemProps {
+  currency: string;
+  title: string;
+  handleSelectCurrency: (currency: string) => void;
+  logo: string;
+  classStatus: string;
+}
+
+const CurrencyItem = ({
+  currency,
+  title,
+  handleSelectCurrency,
+  logo,
+  classStatus,
+}: CurrencyItemProps) => {
   return (
     <Styles.CurrencyWrapper onClick={() => handleSelectCurrency(currency)} className={classStatus}>
       <div className="currency-wrap">
@@ -14,22 +27,6 @@ const CurrencyItem = ({ currency, title, handleSelectCurrency, logo, classStatus
       </div>
     </Styles.CurrencyWrapper>
   );
-};
-
-CurrencyItem.propTypes = {
-  currency: PropTypes.string,
-  title: PropTypes.string,
-  handleSelectCurrency: PropTypes.func,
-  logo: PropTypes.string,
-  classStatus: PropTypes.string,
-};
-
-CurrencyItem.defaultProps = {
-  currency: null,
-  title: null,
-  handleSelectCurrency: null,
-  logo: '',
-  classStatus: PropTypes.string,
 };
 
 export default CurrencyItem;

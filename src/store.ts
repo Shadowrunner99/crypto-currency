@@ -3,6 +3,13 @@ import createSagaMiddleware from 'redux-saga';
 import rootReducer from './rootReducer';
 import rootSaga from './rootSaga';
 
+declare global {
+  interface Window {
+    __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
+  }
+}
+
+// eslint-disable-next-line
 export default async () => {
   const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

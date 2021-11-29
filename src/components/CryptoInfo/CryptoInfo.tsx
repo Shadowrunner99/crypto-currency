@@ -1,12 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { CRYPTO_INFO } from './constants';
-import './style.css';
 import * as Styled from './CryptoInfo.styles';
 import inc from '../../global/images/inc.png';
 import dec from '../../global/images/dec.png';
+import './style.css';
 
-const CryptoInfo = ({ currency, title, buy, sale, change, logo }) => {
+interface CryptoInfoProps {
+  currency: string;
+  title: string;
+  buy: number;
+  sale: number;
+  change: number;
+  logo: string;
+}
+
+const CryptoInfo = ({ currency, title, buy, sale, change, logo }: CryptoInfoProps) => {
   return (
     <Styled.CurrencyInfoWrapper>
       <Styled.CurrencyLogoWrapper>
@@ -33,24 +41,6 @@ const CryptoInfo = ({ currency, title, buy, sale, change, logo }) => {
       </Styled.CurrencyInfo>
     </Styled.CurrencyInfoWrapper>
   );
-};
-
-CryptoInfo.propTypes = {
-  currency: PropTypes.string,
-  title: PropTypes.string,
-  buy: PropTypes.number,
-  sale: PropTypes.number,
-  change: PropTypes.number,
-  logo: PropTypes.string,
-};
-
-CryptoInfo.defaultProps = {
-  currency: '',
-  title: '',
-  buy: 0,
-  sale: 0,
-  change: 0,
-  logo: '',
 };
 
 export default CryptoInfo;

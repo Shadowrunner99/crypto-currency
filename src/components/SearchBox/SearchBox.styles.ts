@@ -14,7 +14,7 @@ export const SearchBox = styled('input')`
   padding: 5px;
   margin-bottom: 17px;
 
-  &::focus {
+  &:focus {
     border: 1px solid #5d6bce;
   }
 `;

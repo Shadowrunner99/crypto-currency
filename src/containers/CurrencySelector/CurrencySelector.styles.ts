@@ -11,7 +11,7 @@ export const CurrencySelectorWrapper = styled('div')`
   text-align: left;
 
   & .arrow-left {
-    align-self:center;
+    align-self: center;
     width: 10px;
     height: 10px;
     margin-right: 13px;
@@ -34,7 +34,6 @@ export const CurrencySelectorWrapper = styled('div')`
     display: flex;
     padding: 8px 0;
   }
-  
 `;
 
 export const SearchWrapper = styled('div')`

@@ -7,6 +7,7 @@ import { selectors } from '../CurrencySelector/reducer';
 import { filteredCurrency } from '../../global/helpers';
 import CurrencySelector from '../CurrencySelector';
 import Logo from '../../global/images/btc.png';
+import { CurrencyResponseItemProps } from '../../global/types';
 
 const Dashboard = () => {
   const data = useSelector(selectors.cryptosData);
@@ -22,7 +23,14 @@ const Dashboard = () => {
         </Styles.TitleContainer>
         <Styles.CurrenciesContainer>
           {filteredCurrency(data, selectedCrypto)?.map(
-            ({ currency, name, sell_price, buy_price, current_change, logo }) => (
+            ({
+              currency,
+              name,
+              sell_price,
+              buy_price,
+              current_change,
+              logo,
+            }: CurrencyResponseItemProps) => (
               <CryptoInfo
                 title={name}
                 currency={currency}
